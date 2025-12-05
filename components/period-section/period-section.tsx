@@ -1,7 +1,10 @@
 import { Cloudy, Moon, Sun } from 'lucide-react';
 
 type PeriodSectionProps = {
-  period: any;
+  period: {
+    type: 'morning' | 'afternoon' | 'evening';
+    title: string;
+  };
 };
 
 const periodIcons = {
@@ -13,7 +16,7 @@ export const PeriodSection = ({ period }: PeriodSectionProps) => {
   return (
     <section className="mb-8 bg-background-tertiary rounded-xl">
       <div className="flex items-center px-5 py-3 justify-between border-b border-[#2E2C30]">
-        <div>{periodIcons[period.type]}</div>
+        <div>{periodIcons[period?.type]}</div>
         <h2 className="text-label-large-size text-content-primary">
           {period.title}
         </h2>

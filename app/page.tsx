@@ -47,7 +47,7 @@ export default function Home() {
             Aqui você pode ver todos os clientes e serviços agendados para hoje.
           </p>
         </div>
-        <PeriodSection period={[]} />
+        <PeriodSection period={{ type: 'morning', title: 'Manhã' }} />
       </div>
     </div>
   );
