@@ -1,4 +1,5 @@
 import { Appointment as AppointmentPrisma } from '@/app/generated/prisma/browser';
+import { AppointmentForm } from '@/components/appointment-form/appointment-form';
 import { PeriodSection } from '@/components/period-section/period-section';
 import {
   Appointment,
@@ -112,6 +113,10 @@ export default function Home() {
         {periods.map((period, index) => (
           <PeriodSection period={period} key={index} />
         ))}
+      </div>
+
+      <div>
+        <AppointmentForm />
       </div>
     </div>
   );
