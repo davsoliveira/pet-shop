@@ -1,4 +1,4 @@
-import { Appointment as AppointmentPrisma } from '@/app/generated/prisma/browser';
+import { Appointment as AppointmentPrisma } from '@/src/generated/prisma';
 import { AppointmentForm } from '@/components/appointment-form/appointment-form';
 import { PeriodSection } from '@/components/period-section/period-section';
 import {
