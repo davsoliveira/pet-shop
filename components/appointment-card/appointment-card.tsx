@@ -1,5 +1,8 @@
 import { cn } from '@/lib/utils';
 import { Appointment } from '@/types/appointment';
+import { AppointmentForm } from '../appointment-form/appointment-form';
+import { Button } from '../ui/button';
+import { EditIcon } from 'lucide-react';
 
 type AppointmentCardProps = {
   appointment: Appointment;
@@ -14,7 +17,7 @@ export const AppointmentCard = ({
     <div
       className={cn(
         'grid grid-cols-2 md:grid-cols-[15%_35%_30%_20%] items-center py-3',
-        !isFirstInSection && 'border-t border-[#353339]'
+        !isFirstInSection && 'border-t border-border-divisor'
       )}
     >
       <div className="text-left pr-4 md:pr-0">
@@ -41,6 +44,14 @@ export const AppointmentCard = ({
         <span className="text-paragraph-small-size text-content-secondary">
           {appointment.description}
         </span>
+      </div>
+
+      <div className="text-right mt-2 md:mt-0 col-span-2 md:col-span-1 flex justify-end items-center gap-2">
+        <AppointmentForm appointment={appointment}>
+          <Button variant="edit" size="icon">
+            <EditIcon size={16} />
+          </Button>
+        </AppointmentForm>
       </div>
     </div>
   );
