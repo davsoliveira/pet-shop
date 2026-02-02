@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mundo Pet
 
-## Getting Started
+This project was developed as part of level 02 of Rocketseat's Next.js course.
 
-First, run the development server:
+## [View the project here](https://pet-shop-davs.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Overview](#overview)
+  - [My Process](#my-proccess)
+  - [Screenshots](#screenshots)
+- [How to Run the Project](#how-to-run-the-project)
+- [Developed with](#developed-with)
+- [Author](#author)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Mundo Pet is a scheduling application for a pet shop environment, where users can create appointments within available time slots, as well as view, edit, and delete existing schedules.
 
-## Learn More
+The goal of this project is to practice building a fullstack application using modern Next.js features and a solid stack for form handling and data validation.
 
-To learn more about Next.js, take a look at the following resources:
+### My Process
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project was built using Next.js, React, and TypeScript, with Prisma as the ORM and PostgreSQL as the database.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+One of the main focuses was working with Server Actions to handle form submissions and database operations, as well as using React Hook Form together with Zod for form management and validation.
 
-## Deploy on Vercel
+This project helped me better understand how to structure fullstack applications with Next.js and improve my database integration skills.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Creating appointment
+
+![](screenshots/desktop.gif)
+
+#### Desktop
+
+![](screenshots/desktop.png)
+
+## How to Run the Project
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone "https://github.com/davsoliveira/pet-shop"
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd pet-shop
+
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure environment variables:
+   Create a `.env` file in the root of the project and add:
+
+   ```bash
+   DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/mundopet"
+   ```
+
+5. Run Prisma migrations:
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+6. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## Developed with
+
+- TypeScript
+- Next.js
+- React
+- Tailwind
+- Prisma
+- PostgreSQL
+- React Hook Form
+- Zod
+- Server Actions
+
+## Author
+
+- GitHub - [davsoliveira](https://github.com/davsoliveira)
+- My portfolio - [Davi Oliveira](https://davsoliveira.github.io/portfolio/)
